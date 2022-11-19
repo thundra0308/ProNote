@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/black"
     tools:context=".ui.fragments.CreateNotesFragment">
 
     <LinearLayout
@@ -40,24 +41,27 @@
 
             <ImageView
                 android:id="@+id/iv_priorityGreen"
-                android:layout_width="25dp"
-                android:layout_height="25dp"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:padding="4dp"
                 android:backgroundTint="@color/green_color"
                 android:background="@drawable/green_dot"/>
 
             <ImageView
                 android:id="@+id/iv_priorityYellow"
-                android:layout_width="25dp"
-                android:layout_height="25dp"
-                android:layout_marginStart="20dp"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_marginStart="8dp"
+                android:padding="4dp"
                 android:backgroundTint="@color/yellow_color"
                 android:background="@drawable/green_dot"/>
 
             <ImageView
                 android:id="@+id/iv_priorityRed"
-                android:layout_width="25dp"
-                android:layout_height="25dp"
-                android:layout_marginStart="20dp"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_marginStart="8dp"
+                android:padding="4dp"
                 android:backgroundTint="@color/red_color"
                 android:background="@drawable/green_dot"/>
 

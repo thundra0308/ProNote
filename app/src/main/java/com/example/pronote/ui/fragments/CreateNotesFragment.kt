@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.Navigation
 import com.example.pronote.R
 import com.example.pronote.databinding.FragmentCreateNotesBinding
 import com.example.pronote.models.Notes
@@ -25,7 +26,7 @@ class CreateNotesFragment : Fragment() {
         binding = FragmentCreateNotesBinding.inflate(layoutInflater,container,false)
         binding?.ivPriorityGreen?.setImageResource(R.drawable.ic_done_white)
         binding?.btnSaveNotes?.setOnClickListener {
-            createNotes()
+            createNotes(it)
         }
 
         binding?.ivPriorityGreen?.setOnClickListener {
@@ -50,7 +51,7 @@ class CreateNotesFragment : Fragment() {
         return binding?.root
     }
 
-    private fun createNotes() {
+    private fun createNotes(it: View?) {
         val title = binding?.etTitle?.text.toString()
         val subTitle = binding?.etSubtitle?.text.toString()
         val note = binding?.etWritenote?.text.toString()
@@ -66,6 +67,7 @@ class CreateNotesFragment : Fragment() {
         )
         viewModel.addNotes(data)
         Toast.makeText(context, "Notes Saved Successfully", Toast.LENGTH_SHORT).show()
+        Navigation.findNavController(it!!).navigate(R.id.action_createNotesFragment_to_homeFragment)
     }
 
 }

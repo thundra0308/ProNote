@@ -1,5 +1,7 @@
 package com.example.pronote
 
+import android.graphics.Color
+import android.graphics.drawable.ColorDrawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.navigation.NavController
@@ -16,6 +18,8 @@ class MainActivity : AppCompatActivity() {
 
         navController = findNavController(R.id.fragmentContainerView)
         setupActionBarWithNavController(navController)
+        var colorDrawable: ColorDrawable = ColorDrawable(Color.parseColor("#FF5151"))
+        supportActionBar?.setBackgroundDrawable(colorDrawable)
 
     }
 
